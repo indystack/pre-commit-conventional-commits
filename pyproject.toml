@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "pre_commit_conventional_commits"
+version = "1.0.0"
+description = "A pre-commit hook that checks commit messages for Conventional Commits formatting."
+classifiers = ["Programming Language :: Python :: 3 :: Only"]
+keywords = ["git", "pre-commit", "conventional-commits", "git-hooks"]
+authors = ["Igor Hrček <igor@mailerlite.com>"]
+readme = "README.md"
+
+[project.urls]
+code = "https://github.com/indystack/pre-commit-conventional-commits"
+tracker = "https://github.com/indystack/pre-commit-conventional-commits/issues"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+requests = "^2.25.0"
+pre-commit = "^2.12.1"
+setuptools = "^67.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+black = "^23.3.0"
+flake8 = "^6.0.0"
+pytest-cov = "^4.0.0"
+
+[tool.poetry.scripts]
+pre-commit-conventional-commits = "pre_commit_conventional_commits.hook:main"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.black]
+line-length = 127
+target-version = ['py311']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = [
+    "*.egg-info",
+    ".git",
+    ".pytest_cache",
+    ".vscode",
+]

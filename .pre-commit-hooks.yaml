@@ -1,0 +1,7 @@
+- id: pre-commit-conventional-commits
+  name: Conventional Commits
+  entry: pre-commit-conventional-commits
+  language: python
+  description: Checks commit message for Conventional Commits formatting
+  always_run: true
+  stages: [commit-msg]
