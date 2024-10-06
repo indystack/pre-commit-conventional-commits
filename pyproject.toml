@@ -14,7 +14,7 @@ tracker = "https://github.com/indystack/pre-commit-conventional-commits/issues"
 [tool.poetry.dependencies]
 python = "^3.8.1"
 requests = "^2.25.0"
-pre-commit = "^2.12.1"
+pre-commit = "^4.0.0"
 setuptools = "^67.0.0"
 
 [tool.poetry.dev-dependencies]
