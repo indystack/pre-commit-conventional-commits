@@ -1,3 +1,6 @@
+[project]
+name = "pre_commit_conventional_commits"
+
 [tool.poetry]
 name = "pre_commit_conventional_commits"
 version = "1.0.0"
